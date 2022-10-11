@@ -16,11 +16,12 @@ class BaseModel:
         date_format = "%Y-%m-%dT%H:%M:%S.%f"
         if kwargs:
             """key word arguements check & init attributes"""
-        for key, Value in kwargs.items():
+        val = type(str)
+        for key, val in kwargs.items():
             if key == "created_at" or key == "updated_at":
-                Value = datetime.strptime(Value, date_format)
+                val: datetime.strptime(val, date_format)
                 if key != "__class__":
-                    setattr(self, key, Value)
+                    setattr(self, key, val)
         else:
             models.storage.new(self)
 
