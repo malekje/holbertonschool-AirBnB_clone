@@ -16,10 +16,10 @@ class BaseModel:
         date_format = "%Y-%m-%dT%H:%M:%S.%f"
         if kwargs:
             """key word arguements check & init attributes"""
-        val = type(str)
+
         for key, val in kwargs.items():
             if key == "created_at" or key == "updated_at":
-                val: datetime.strptime(val, date_format)
+                val = datetime.strptime(val, date_format)
                 if key != "__class__":
                     setattr(self, key, val)
         else:
@@ -41,7 +41,7 @@ class BaseModel:
     def to_dict(self):
         """returns dict countaining all keys/values of __dict__"""
         self.__dict__['__class__'] = self.__class__.__name__
-        self.__dict__['update_at'] = self.updated_at.isoformat()
+        self.__dict__['updated_at'] = self.updated_at.isoformat()
         self.__dict__['created_at'] = self.created_at.isoformat()
 
         return self.__dict__
