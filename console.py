@@ -3,12 +3,13 @@
 
 
 import cmd
-
+from models.base_model import BaseModel
+from models import storage
 
 
 class HBNBCommand(cmd.Cmd):
     """HBNBCommand"""
-    cmd.PROMPT = "(hbnb) "
+    prompt = "(hbnb) "
 
 
 
@@ -22,7 +23,7 @@ class HBNBCommand(cmd.Cmd):
         return True
     
     def emptyline(self):
-        """empty line should not execute anything"""
+        """ Empty line should not execute anything """
         pass
 
 
