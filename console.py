@@ -32,10 +32,12 @@ class HBNBCommand(cmd.Cmd):
         """Creates new instance of BaseModel"""
         if len(args) == 0:
             print("** class name missing **")
+            return
         elif args[0] not in self.classes:
             print("** class doesn't exist **")
+            return
         else:
-            new_instance = eval(args)()
+            new_instance = eval("{}()".format(args[0]))
             new_instance.save()
             print(new_instance.id)
 
