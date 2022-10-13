@@ -41,6 +41,12 @@ EOF  help  quit
 (hbnb) 
 $
 ```
+Testing 📏
+======
+Unittests for the HolbertonBnB project are defined in the [tests](https://github.com/malekje/holbertonschool-AirBnB_clone/tree/main/tests) folder. To run the entire test suite simultaneously, execute the following command:
+```
+
+```
 Authors ✒️
 ======
 + [Malek Mayeh](https://github.com/malekje)
