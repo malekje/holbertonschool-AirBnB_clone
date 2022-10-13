@@ -18,10 +18,12 @@ class BaseModel:
             """key word arguements check & init attributes"""
 
         for key, val in kwargs.items():
-            if key == "created_at" or key == "updated_at":
-                val = datetime.strptime(val, date_format)
-                if key != "__class__":
-                    setattr(self, key, val)
+            if key == "id":
+                self.id = str(val)
+            elif key == "created_at":
+                self.created_at = datetime.strptime(val, date_format)
+            elif key == "update_at":
+                self.updated_at = datetime.strptime(val, date_format)
         else:
             models.storage.new(self)
 
@@ -40,8 +42,8 @@ class BaseModel:
 
     def to_dict(self):
         """returns dict countaining all keys/values of __dict__"""
-        self.__dict__['__class__'] = self.__class__.__name__
-        self.__dict__['updated_at'] = self.updated_at.isoformat()
-        self.__dict__['created_at'] = self.created_at.isoformat()
-
-        return self.__dict__
+        Newdict = self.__dict__.copy()
+        Newdict["created_at"] = self.created_at.isoformat()
+        Newdict["updated_at"] = self.updated_at.isoformat()
+        Newdict["__class__"] = self.__class__.__name__
+        return Newdict
