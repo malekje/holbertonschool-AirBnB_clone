@@ -46,9 +46,10 @@ class HBNBCommand(cmd.Cmd):
             new_instance.save()
             print(new_instance.id)
 
-    def do_show(self, args):
+    def do_show(self, arg):
         """Prints the string representation of an instance"""
-        if len(args) == 0:
+        args = arg.split(" ")
+        if len(arg) == 0:
             print("** class name missing **")
             return
         if args[0] not in self.classes:
