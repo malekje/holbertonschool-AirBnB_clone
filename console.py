@@ -113,7 +113,7 @@ class HBNBCommand(cmd.Cmd):
     
     def do_update(self, arg):
         """Updates an instance based on the class name and id"""
-        args = arg.split()
+        args = arg.split(" ")
         obj = storage.all()
 
         if arg == "":
