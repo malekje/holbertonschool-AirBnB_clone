@@ -45,7 +45,7 @@ class Test_BaseModel(unittest.TestCase):
         update = bm.updated_at
         bm.save()
         self.assertEqual(update, datetime.utcnow())
- 
+
     def test_to_dict(self):
         """ test to dict """
         bm = BaseModel()
@@ -58,8 +58,7 @@ class Test_BaseModel(unittest.TestCase):
         bm = BaseModel()
         bm2 = BaseModel()
         self.assertNotEqual(bm.__str__(), bm2.__str__())
-        
 
 
-if __name__ =='__main__':
+if __name__ == '__main__':
     unittest.main()
