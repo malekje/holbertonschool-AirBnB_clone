@@ -67,10 +67,10 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
 
 
-    def do_destroy(self, args):
+    def do_destroy(self, arg):
         """ Deletes an instance based on the class name and id """
-        args = args.split(" ")
-        if len(args) == 0:
+        args = arg.split(" ")
+        if len(arg) == 0:
             print("** class name missing **")
             return
         if args[0] not in self.classes:
@@ -111,20 +111,20 @@ class HBNBCommand(cmd.Cmd):
                     print("** no instance found **")
 
     
-    def do_update(self, args):
+    def do_update(self, arg):
         """Updates an instance based on the class name and id"""
-        args = args.split()
+        args = arg.split()
         obj = storage.all()
 
         if args == "":
             print("** class name missing **")
         elif args not in self.classes:
             print("** class doesn't exist **")
-        elif len(args) == 1:
+        elif len(arg) == 1:
             print("** instance id missing **")
         elif ("{}.{}".format(args[0], args[1])) not in storage.all().keys:
             print("** no instance found **")
-        elif len(args) == 2:
+        elif len(arg) == 2:
             print("** attribute name missing **")
         else:
             print("** value missing **")
