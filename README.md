@@ -45,7 +45,7 @@ Testing 📏
 ======
 Unittests for the HolbertonBnB project are defined in the [tests](https://github.com/malekje/holbertonschool-AirBnB_clone/tree/main/tests) folder. To run the entire test suite simultaneously, execute the following command:
 ```
-
+$ echo "python3 -m unittest discover tests" | bash
 ```
 Authors ✒️
 ======
