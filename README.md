@@ -5,6 +5,7 @@ Desciption :package:
 The console is the first segment of the AirBnB project at Holberton School that will collectively cover fundamental concepts of higher level programming. The goal of AirBnB project is to eventually deploy our server a simple copy of the AirBnB Website(HBnB). A command interpreter is created in this segment to manage objects for the AirBnB(HBnB) website.
 
 # Execution
+## Interactive
 ```
 $ ./console.py
 (hbnb) help
@@ -48,7 +49,17 @@ Unittests for the HolbertonBnB project are defined in the [tests](https://github
 $ echo "python3 -m unittest discover tests" | bash
 ```
 
-#mo
+Models used in this project :dart:
+======
+| File | Description |
+| ------ | ----------- |
+| [base_model.py](https://github.com/malekje/holbertonschool-AirBnB_clone/blob/main/models/base_model.py)  | BaseModel class for all classes. |
+| [user.py](https://github.com/malekje/holbertonschool-AirBnB_clone/blob/main/models/user.py) | User class. |
+| [city.py](https://github.com/malekje/holbertonschool-AirBnB_clone/blob/main/models/city.py)   | City class. |
+| [place.py](https://github.com/malekje/holbertonschool-AirBnB_clone/blob/main/models/place.py)   | Place class. |
+| [state.py](https://github.com/malekje/holbertonschool-AirBnB_clone/blob/main/models/state.py)   | State class. |
+| [amenity.py](https://github.com/malekje/holbertonschool-AirBnB_clone/blob/main/models/amenity.py)   | Amenity class. |
+| [review.py](https://github.com/malekje/holbertonschool-AirBnB_clone/blob/main/models/review.py)   | Review class. |
 Authors ✒️
 ======
 + [Malek Mayeh](https://github.com/malekje)
