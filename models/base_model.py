@@ -27,9 +27,6 @@ class BaseModel:
         else:
             models.storage.new(self)
 
-
-
-
     def __str__(self):
         """print [<class name>] (<self.id>) <self.__dict__>"""
         return ('[{}] ({}) {}'.
