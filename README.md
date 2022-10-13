@@ -61,7 +61,7 @@ Models used in this project :dart:
 | [amenity.py](https://github.com/malekje/holbertonschool-AirBnB_clone/blob/main/models/amenity.py)   | Amenity class. |
 | [review.py](https://github.com/malekje/holbertonschool-AirBnB_clone/blob/main/models/review.py)   | Review class. |
 
-How to use the commands
+How to use the commands :white_check_mark:
 ======
 | Commands | Usage |
 | ------ | ----------- |
