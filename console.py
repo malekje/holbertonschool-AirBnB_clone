@@ -14,25 +14,27 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
+
 class HBNBCommand(cmd.Cmd):
     """HBNBCommand"""
     prompt = "(hbnb) "
 
-    classes = ["User", "BaseModel", "State", "City", "Amenity", "Place", "Review"]
+    classes = ["User", "BaseModel", "State", "City",
+                       "Amenity", "Place", "Review"]
 
     @classmethod
     def do_quit(self, args):
         """ Exit command """
         return True
-    
+
     def do_EOF(self, args):
         """ Exit command """
         return True
-    
+
     def emptyline(self):
         """ Empty line should not execute anything """
         pass
-    
+
     def do_create(self, arg):
         """Creates new instance of BaseModel"""
         args = arg.split(" ")
@@ -66,7 +68,6 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** no instance found **")
 
-
     def do_destroy(self, arg):
         """ Deletes an instance based on the class name and id """
         args = arg.split(" ")
@@ -86,12 +87,11 @@ class HBNBCommand(cmd.Cmd):
             for key in all_obj.keys():
                 if new_object == key:
                     delete_item = True
-            if delete_item == True:
-                del all_obj[new_object]        
+            if delete_item is True:
+                del all_obj[new_object]
                 storage.save()
             else:
                 print("** no instance found **")
-            
 
     def do_all(self, args):
         """ Prints all string representation of all instances """
@@ -110,7 +110,6 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     print("** no instance found **")
 
-    
     def do_update(self, arg):
         """Updates an instance based on the class name and id"""
         args = arg.split(" ")
@@ -125,7 +124,7 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 1:
             print("** instance id missing **")
             return
-        
+
         """if ("{}.{}".format(arg[0], arg[1])) not in storage.all().keys:
             print("** no instance found **")
             return"""
@@ -147,6 +146,7 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()
             else:
                 print("** no instance found **")
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
