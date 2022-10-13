@@ -11,13 +11,14 @@ from models.user import User
 from models.state import State
 from models.city import City
 from models.amenity import Amenity
+from models.place import Place
 from models.review import Review
 
 class HBNBCommand(cmd.Cmd):
     """HBNBCommand"""
     prompt = "(hbnb) "
 
-    classes = ["BaseModel", "State", "City", "Amenity", "Review"]
+    classes = ["BaseModel", "State", "City", "Amenity", "Place", "Review"]
 
     @classmethod
     def do_quit(self, args):
