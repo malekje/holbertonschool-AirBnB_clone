@@ -59,13 +59,12 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 1:
             print("** instance id missing **")
             return
+        total_obj = storage.all()
+        new_entry = args[0] + "." + args[1]
+        if new_entry in total_obj:
+            print(total_obj[new_entry])
         else:
-            total_obj = storage.all()
-            new_entry = args[0] + "." + args[1]
-            if new_entry in total_obj:
-                print(total_obj[new_entry])
-            else:
-                print("** no instance found **")
+            print("** no instance found **")
 
 
     def do_destroy(self, arg):
