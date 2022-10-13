@@ -61,6 +61,18 @@ Models used in this project :dart:
 | [amenity.py](https://github.com/malekje/holbertonschool-AirBnB_clone/blob/main/models/amenity.py)   | Amenity class. |
 | [review.py](https://github.com/malekje/holbertonschool-AirBnB_clone/blob/main/models/review.py)   | Review class. |
 
+How to use the commands
+======
+| Commands | Usage |
+| ------ | ----------- |
+| `help`  | displays all commands available. | 
+| `create` | creates new object (ex. a new User, Place).| 
+| `update`   | 	updates attribute of an object. |
+| `destroy`   | destroys specified object. |
+| `show`   | retrieve an object from a file, a database. |
+| `all`   | display all objects in class. |
+| `quit`   | exits the program. |
+
 
 Authors ✒️
 ======
