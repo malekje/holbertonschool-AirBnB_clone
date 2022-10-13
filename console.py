@@ -8,12 +8,16 @@ from hashlib import new
 from models.base_model import BaseModel
 from models import storage
 from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.review import Review
 
 class HBNBCommand(cmd.Cmd):
     """HBNBCommand"""
     prompt = "(hbnb) "
 
-    classes = ["BaseModel"]
+    classes = ["BaseModel", "State", "City", "Amenity", "Review"]
 
     @classmethod
     def do_quit(self, args):
@@ -28,8 +32,9 @@ class HBNBCommand(cmd.Cmd):
         """ Empty line should not execute anything """
         pass
     
-    def do_create(self, args):
+    def do_create(self, arg):
         """Creates new instance of BaseModel"""
+        args = arg.split(" ")
         if len(args) == 0:
             print("** class name missing **")
             return
