@@ -7,7 +7,6 @@ import unittest
 
 class Test_User(unittest.TestCase):
     """ Test class City """
-     
     def test_state_id(self):
         self.assertEqual(str, type(City.state_id))
 
