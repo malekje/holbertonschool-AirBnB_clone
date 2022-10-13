@@ -17,7 +17,7 @@ class Test_BaseModel(unittest.TestCase):
         id1 = BaseModel()
         id2 = BaseModel()
         self.assertNotEqual(id1.id, id2.id)
-    
+
     def test_save(self):
         """ test save """
         bm = BaseModel()
@@ -45,8 +45,7 @@ class Test_BaseModel(unittest.TestCase):
         update = bm.updated_at
         bm.save()
         self.assertEqual(update, datetime.utcnow())
-
-        
+ 
     def test_to_dict(self):
         """ test to dict """
         bm = BaseModel()
