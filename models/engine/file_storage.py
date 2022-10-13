@@ -11,14 +11,11 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
+
 class FileStorage:
     """ class FileStorage that serializes instances to a JSON file """
-
-    
     __file_path = "file.json"
     __objects = {}
-
-    
 
     def all(self):
         """ returns the dictionary objects """
@@ -35,7 +32,7 @@ class FileStorage:
             new_dict[k] = v.to_dict()
         with open(self.__file_path, "w", encoding="UTF-8") as f:
             json.dump(new_dict, f)
-   
+
     def reload(self):
         """ deserializes the JSON file to __objects """
         try:
